@@ -1,9 +1,3 @@
-$cp = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
-if (!$cp.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Write-Output "Please run with administrator"
-    exit
-}
-
 Write-Output "Setting Scoop env..."
 $env:SCOOP = 'C:\MyProgram\ScoopPrograms'
 [Environment]::SetEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
@@ -18,6 +12,3 @@ $proxy = Read-Host "Entry http proxy address: "
 if ($proxy) {
     scoop config proxy $proxy
 }
-
-Write-Output "Installing sudo..."
-scoop install -g sudo 
