@@ -1,3 +1,9 @@
+Write-Output "Installing Git"
+scoop install git
+
+Write-Output "Installing Busybox"
+scoop install busybox
+
 Write-Output "Installing aria2..."
 scoop install aria2
 scoop config aria2-enabled true
