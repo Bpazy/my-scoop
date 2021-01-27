@@ -28,3 +28,6 @@ scoop install python
 
 Write-Output "Installing Nodejs"
 scoop install nodejs
+
+Write-Output "Installing gcc"
+scoop install gcc
