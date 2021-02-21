@@ -1,3 +1,6 @@
+scoop bucket add dorado https://github.com/chawyehsu/dorado
+
+
 Write-Output "Installing Git"
 scoop install git
 
@@ -30,4 +33,6 @@ Write-Output "Installing Nodejs"
 scoop install nodejs
 
 Write-Output "Installing gcc"
-scoop install gcc
+# scoop install gcc
+scoop install dorado/nuwen-mingw-gcc
+scoop install make
