@@ -36,3 +36,6 @@ Write-Output "Installing gcc"
 # scoop install gcc
 scoop install dorado/nuwen-mingw-gcc
 scoop install make
+
+Write-Output "Installing VIM"
+scoop install vim
