@@ -43,3 +43,6 @@ scoop install vim
 Write-Output "Installing python27"
 scoop bucket add versions
 scoop install python27
+
+Write-Output "Installing groovy"
+scoop install groovy
