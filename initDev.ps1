@@ -46,3 +46,6 @@ scoop install python27
 
 Write-Output "Installing groovy"
 scoop install groovy
+
+Write-Output "Installing rust"
+scoop install rust
