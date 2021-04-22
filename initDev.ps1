@@ -47,5 +47,4 @@ scoop install python27
 Write-Output "Installing groovy"
 scoop install groovy
 
-Write-Output "Installing rust"
-scoop install rust
+Write-Output "You should install Rust by 'rustup' from 'https://www.rust-lang.org/tools/install'"
