@@ -1,4 +1,5 @@
 scoop bucket add dorado https://github.com/chawyehsu/dorado
+scoop bucket add forkedMain https://github.com/Bpazy/Main
 
 
 Write-Output "Installing Git"
@@ -12,7 +13,7 @@ scoop install aria2
 scoop config aria2-enabled true
 
 Write-Output "Intalling Go..."
-scoop install go 
+scoop install forkedMain/go 
 
 Write-Output "Installing sudo..."
 scoop install sudo 
