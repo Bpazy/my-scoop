@@ -48,4 +48,7 @@ scoop install python27
 Write-Output "Installing groovy"
 scoop install groovy
 
+Write-Output "Installing iperf3"
+scoop install iperf3
+
 Write-Output "You should install Rust by 'rustup' from 'https://www.rust-lang.org/tools/install'"
