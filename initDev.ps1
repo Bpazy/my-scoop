@@ -52,3 +52,6 @@ Write-Output "Installing iperf3"
 scoop install iperf3
 
 Write-Output "You should install Rust by 'rustup' from 'https://www.rust-lang.org/tools/install'"
+
+Write-Output "Install git-chglog"
+scoop install git-chglog
