@@ -1,9 +1,8 @@
-scoop bucket add dorado https://github.com/chawyehsu/dorado
-scoop bucket add forkedMain https://github.com/Bpazy/Main
-
-
 Write-Output "Installing Git"
 scoop install git
+
+scoop bucket add dorado https://github.com/chawyehsu/dorado
+scoop bucket add forkedMain https://github.com/Bpazy/Main
 
 Write-Output "Installing Busybox"
 scoop install busybox
