@@ -17,12 +17,12 @@ scoop install forkedMain/go
 Write-Output "Installing sudo..."
 scoop install sudo 
 
+Write-Output "Installing openjdk11..."
+scoop install openjdk11
+
 Write-Output "Installing openjdk8-redhet..."
 scoop bucket add java
 scoop install openjdk8-redhat
-
-Write-Output "Installing openjdk11..."
-scoop install openjdk11
 
 Write-Output "Use scoop reset <java>[@<version>] to switch Javas"
 
