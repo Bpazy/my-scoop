@@ -12,18 +12,21 @@
 # [Environment]::SetEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, 'Machine')
 
 Write-Output "Setting proxy to install Scoop..."
-$proxy = Read-Host "Entry http proxy address, Such as '127.0.0.1:10809': "
+$proxy = Read-Host "Entry http proxy address, Such as 'http://127.0.0.1:10809': "
 
-Write-Output "Installing Scoop..."
-$client = New-Object System.Net.WebClient
 if ($proxy) {
-    $client.Proxy = New-Object System.Net.WebProxy($proxy)
+    # If you want to use a proxy that isn't already configured in Internet Options
+    [net.webrequest]::defaultwebproxy = new-object net.webproxy $proxy
+
+    # If you want to use the Windows credentials of the logged-in user to authenticate with your proxy
+    # [net.webrequest]::defaultwebproxy.credentials = [net.credentialcache]::defaultcredentials
+    # If you want to use other credentials (replace 'username' and 'password')
+    # [net.webrequest]::defaultwebproxy.credentials = new-object net.networkcredential 'username', 'password'
 }
-# FIXME 从我自己的仓库下载，给 install.ps1 和 core.ps1 内部增加了代理，固定值：127.0.0.1:10809
-Invoke-Expression $client.DownloadString('https://raw.githubusercontent.com/Bpazy/scoop/master/bin/install.ps1')
+Write-Output "Installing Scoop..."
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 
 Write-Output "Setting Scoop proxy..."
-$proxy = Read-Host "Entry http proxy address, Such as '127.0.0.1:10809': "
 if ($proxy) {
     scoop config proxy $proxy
 }
