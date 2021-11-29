@@ -12,7 +12,7 @@
 # [Environment]::SetEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, 'Machine')
 
 Write-Output "Setting proxy to install Scoop..."
-$proxy = Read-Host "Entry http proxy address, Such as 'http://127.0.0.1:10809': "
+$proxy = Read-Host "Entry http proxy address, Such as '127.0.0.1:7890': "
 
 if ($proxy) {
     # If you want to use a proxy that isn't already configured in Internet Options
