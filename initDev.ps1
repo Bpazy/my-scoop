@@ -52,3 +52,6 @@ scoop install iperf3
 
 Write-Output "You should install Rust by 'rustup' from 'https://www.rust-lang.org/tools/install'"
 
+
+Write-Output "Installing maven"
+scoop install maven
