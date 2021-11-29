@@ -28,5 +28,7 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.
 
 Write-Output "Setting Scoop proxy..."
 if ($proxy) {
+    # 如果发生了类似于: ERROR Download failed! (Error 19) Name resolution failed
+    # 则移除代理: scoop config rm proxy
     scoop config proxy $proxy
 }

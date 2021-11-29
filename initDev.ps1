@@ -54,4 +54,4 @@ Write-Output "You should install Rust by 'rustup' from 'https://www.rust-lang.or
 
 
 Write-Output "Installing maven"
-scoop install maven
+scoop install main/maven
