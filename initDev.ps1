@@ -37,6 +37,8 @@ scoop reset python
 
 Write-Output "Installing Nodejs"
 scoop install nodejs
+scoop install nodejs12
+scoop reset nodejs12
 
 Write-Output "Installing gcc"
 # scoop install gcc
