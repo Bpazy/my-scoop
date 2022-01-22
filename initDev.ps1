@@ -12,7 +12,7 @@ scoop install aria2
 scoop config aria2-enabled true
 
 Write-Output "Intalling Go..."
-scoop install bpazyForked/go 
+scoop install main/go 
 
 Write-Output "Installing sudo..."
 scoop install sudo 
