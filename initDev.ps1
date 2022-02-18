@@ -45,7 +45,7 @@ scoop reset nodejs12
 
 Write-Output "Installing gcc"
 # scoop install gcc
-scoop install dorado/nuwen-mingw-gcc
+scoop install nuwen-mingw-gcc
 scoop install make
 
 Write-Output "Installing VIM"
