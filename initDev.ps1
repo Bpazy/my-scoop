@@ -12,7 +12,7 @@ scoop install aria2
 scoop config aria2-enabled true
 
 Write-Output "Intalling Go..."
-scoop install main/go 
+scoop install go 
 
 Write-Output "Installing sudo..."
 scoop install sudo 
@@ -58,4 +58,4 @@ Write-Output "You should install Rust by 'rustup' from 'https://www.rust-lang.or
 
 
 Write-Output "Installing maven"
-scoop install main/maven
+scoop install maven
