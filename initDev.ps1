@@ -20,6 +20,9 @@ scoop install sudo
 Write-Output "Installing openjdk11..."
 scoop install openjdk11
 
+Write-Output "Installing openjdk17..."
+scoop install openjdk17
+
 Write-Output "Installing openjdk8-redhet..."
 scoop bucket add java
 scoop install openjdk8-redhat
