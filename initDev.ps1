@@ -17,9 +17,6 @@ scoop install go
 Write-Output "Installing sudo..."
 scoop install sudo 
 
-Write-Output "Installing openjdk11..."
-scoop install openjdk11
-
 Write-Output "Installing openjdk17..."
 scoop install openjdk17
 
