@@ -1,61 +1,54 @@
-Write-Output "Installing Git"
-scoop install git
+$buckets = @(
+    @{ Alias = 'dorado'; Url = 'https://github.com/chawyehsu/dorado' }
+    @{ Alias = 'bpazyForked'; Url = 'https://github.com/Bpazy/Main' }
+    @{ Alias = 'java' }
+    @{ Alias = 'versions' }
+)
 
-scoop bucket add dorado https://github.com/chawyehsu/dorado
-scoop bucket add bpazyForked https://github.com/Bpazy/Main
+$tools = @(
+    'git'
+    'busybox'
+    'aria2'
+    'go'
+    'sudo'
+    'openjdk17'
+    'openjdk8-redhat'
+    'python27'
+    'python'
+    'nodejs'
+    'nodejs12'
+    'nuwen-mingw-gcc'
+    'make'
+    'vim'
+    'groovy'
+    'iperf3'
+    'maven'
+    'gcc'
+)
 
-Write-Output "Installing Busybox"
-scoop install busybox
+$commands = @(
+    'scoop config aria2-enabled true'
+    'scoop reset openjdk8-redhat'
+    'scoop reset python'
+    'scoop reset nodejs12'
+    "Write-Output 'You should install Rust by rustup from https://www.rust-lang.org/tools/install'"
+)
 
-Write-Output "Installing aria2..."
-scoop install aria2
-scoop config aria2-enabled true
+foreach ($bucket in $buckets) {
+    if ( $bucket.ContainsKey('Url')) {
+        scoop bucket add $bucket.Alias $bucket.Url
+    }
+    else {
+        scoop bucket add $bucket.Alias
+    }
+}
 
-Write-Output "Intalling Go..."
-scoop install go 
+foreach ($tool in $tools) {
+    Write-Output 'Installing ' + $tool
+    scoop install $tool
+}
 
-Write-Output "Installing sudo..."
-scoop install sudo 
+foreach ($command in $commands) {
+    Invoke-Expression $command
+}
 
-Write-Output "Installing openjdk17..."
-scoop install openjdk17
-
-Write-Output "Installing openjdk8-redhet..."
-scoop bucket add java
-scoop install openjdk8-redhat
-scoop reset openjdk8-redhat
-
-Write-Output "Use scoop reset <java>[@<version>] to switch Javas"
-
-Write-Output "Installing python27"
-scoop bucket add versions
-scoop install python27
-
-Write-Output "Installing Python"
-scoop install python
-scoop reset python
-
-Write-Output "Installing Nodejs"
-scoop install nodejs
-scoop install nodejs12
-scoop reset nodejs12
-
-Write-Output "Installing gcc"
-# scoop install gcc
-scoop install nuwen-mingw-gcc
-scoop install make
-
-Write-Output "Installing VIM"
-scoop install vim
-
-Write-Output "Installing groovy"
-scoop install groovy
-
-Write-Output "Installing iperf3"
-scoop install iperf3
-
-Write-Output "You should install Rust by 'rustup' from 'https://www.rust-lang.org/tools/install'"
-
-
-Write-Output "Installing maven"
-scoop install maven
