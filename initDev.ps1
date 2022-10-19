@@ -1,3 +1,4 @@
+# Append your buckets here
 $buckets = @(
     @{ Alias = 'dorado'; Url = 'https://github.com/chawyehsu/dorado' }
     @{ Alias = 'bpazyForked'; Url = 'https://github.com/Bpazy/Main' }
@@ -5,7 +6,8 @@ $buckets = @(
     @{ Alias = 'versions' }
 )
 
-$tools = @(
+# Append your apps here
+$apps = @(
     'git'
     'busybox'
     'aria2'
@@ -26,6 +28,7 @@ $tools = @(
     'gcc'
 )
 
+# Commands will be invoking lastly
 $commands = @(
     'scoop config aria2-enabled true'
     'scoop reset openjdk8-redhat'
@@ -43,9 +46,9 @@ foreach ($bucket in $buckets) {
     }
 }
 
-foreach ($tool in $tools) {
-    Write-Output 'Installing ' + $tool
-    scoop install $tool
+foreach ($app in $apps) {
+    Write-Output 'Installing ' + $app
+    scoop install $app
 }
 
 foreach ($command in $commands) {
