@@ -26,6 +26,7 @@ $apps = @(
     'iperf3'
     'maven'
     'gcc'
+    'helm'
 )
 
 # Commands will be invoking lastly
