@@ -27,6 +27,7 @@ $apps = @(
     'maven'
     'gcc'
     'helm'
+    'gh'
 )
 
 # Commands will be invoking lastly
