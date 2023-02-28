@@ -1,7 +1,7 @@
 # Append your buckets here
 $buckets = @(
     @{ Alias = 'dorado'; Url = 'https://github.com/chawyehsu/dorado' }
-    @{ Alias = 'bpazyForked'; Url = 'https://github.com/Bpazy/Main' }
+    # @{ Alias = 'bpazyForked'; Url = 'https://github.com/Bpazy/Main' }
     @{ Alias = 'java' }
     @{ Alias = 'versions' }
 )
