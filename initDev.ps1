@@ -28,6 +28,8 @@ $apps = @(
     'gcc'
     'helm'
     'gh'
+    'iperf3'
+    'youtube-dl'
 )
 
 # Commands will be invoking lastly
