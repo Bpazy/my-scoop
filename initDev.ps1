@@ -39,6 +39,9 @@ $commands = @(
     'scoop reset python'
     'scoop reset nodejs12'
     "Write-Output 'You should install Rust by rustup from https://www.rust-lang.org/tools/install'"
+    # Install httpie
+    'python -m pip install --upgrade pip wheel'
+    'python -m pip install httpie'
 )
 
 foreach ($bucket in $buckets) {
