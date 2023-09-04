@@ -16,6 +16,7 @@ $apps = @(
     'openjdk17'
     'openjdk8-redhat'
     'python27'
+    'python38'
     'python'
     'nodejs'
     'nodejs12'
